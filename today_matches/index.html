@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Football Matches Voting System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>اختار الماتش اللي هيتذاع على الشاشة</h1>
+
+    <div class="match">
+      <div class="team">
+        <img src="https://cdn.wallpapersafari.com/52/36/Bjfy2K.jpg" alt="Match 1 Team 1" />
+        <h2>Match 1 Team 1</h2>
+        <p>May 10, 2023 - 8:00 PM</p>
+        <div class="votez">
+          <button class="left-btn">Vote</button>
+        </div>
+      </div>
+      <div class="team">
+        <img src="https://cdn.wallpapersafari.com/52/36/Bjfy2K.jpg" alt="Match 1 Team 2" />
+        <h2>Match 1 Team 2</h2>
+        <p>May 10, 2023 - 8:00 PM</p>
+        <div class="votez">
+          <button class="right-btn">Vote</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="vote">
+      <div class="bar">
+        <div class="left-bar"></div>
+        <div class="right-bar"></div>
+      </div>
+      <div class="labels">
+        <span class="left-label">0%</span>
+        <span class="right-label">0%</span>
+      </div>
+    </div>
+
+    <hr / style="margin-bottom: 50px;">
+
+    <div class="match">
+      <div class="team">
+        <img src="https://cdn.wallpapersafari.com/52/36/Bjfy2K.jpg" alt="Match 1 Team 1" />
+        <h2>Match 1 Team 1</h2>
+        <p>May 10, 2023 - 8:00 PM</p>
+        <div class="votez">
+          <button class="left-btn">Vote</button>
+        </div>
+      </div>
+      <div class="team">
+        <img src="https://cdn.wallpapersafari.com/52/36/Bjfy2K.jpg" alt="Match 1 Team 2" />
+        <h2>Match 1 Team 2</h2>
+        <p>May 10, 2023 - 8:00 PM</p>
+        <div class="votez">
+          <button class="right-btn">Vote</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="vote">
+      <div class="bar">
+        <div class="left-bar"></div>
+        <div class="right-bar"></div>
+      </div>
+      <div class="labels">
+        <span class="left-label">0%</span>
+        <span class="right-label">0%</span>
+      </div>
+    </div>
+
+    <hr / style="margin-bottom: 50px;">
+
+    <div class="match">
+      <div class="team">
+        <img src="https://cdn.wallpapersafari.com/52/36/Bjfy2K.jpg" alt="Match 1 Team 1" />
+        <h2>Match 1 Team 1</h2>
+        <p>May 10, 2023 - 8:00 PM</p>
+        <div class="votez">
+          <button class="left-btn">Vote</button>
+        </div>
+      </div>
+      <div class="team">
+        <img src="https://cdn.wallpapersafari.com/52/36/Bjfy2K.jpg" alt="Match 1 Team 2" />
+        <h2>Match 1 Team 2</h2>
+        <p>May 10, 2023 - 8:00 PM</p>
+        <div class="votez">
+          <button class="right-btn">Vote</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="vote">
+      <div class="bar">
+        <div class="left-bar"></div>
+        <div class="right-bar"></div>
+      </div>
+      <div class="labels">
+        <span class="left-label">0%</span>
+        <span class="right-label">0%</span>
+      </div>
+    </div>
+
+    <hr / style="margin-bottom: 50px;">
+
+
+    <div class="match">
+      <div class="team">
+        <!-- <img src="https://i2-prod.liverpoolecho.co.uk/incoming/article25324965.ece/ALTERNATES/s1200/0_NOTLFC.jpg" alt="Match 1 Team 1" /> -->
+        <img src="https://cdn.wallpapersafari.com/52/36/Bjfy2K.jpg" alt="Match 1 Team 2" />
+        <h2>Match 2 Team 1</h2>
+        <p>May 10, 2023 - 8:00 PM</p>
+        <div class="votez">
+          <button class="left-btn">Vote</button>
+        </div>
+      </div>
+      <div class="team">
+        <img src="https://assets-webp.khelnow.com/news/uploads/2023/02/Arsenal-vs-Man-City-768x384.jpg.webp?imwidth=1920" alt="Match 1 Team 2" style="transform: scaleX(-1);" />
+        <h2>Match 2 Team 2</h2>
+        <p>May 10, 2023 - 8:00 PM</p>
+        <div class="votez">
+            <button class="right-btn" disabled >Vote</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="vote"> -->
+    <!--   <div class="bar"> -->
+    <!--     <div class="left-bar"></div> -->
+    <!--     <div class="right-bar"></div> -->
+    <!--   </div> -->
+    <!--   <div class="labels"> -->
+    <!--     <span class="left-label">0%</span> -->
+    <!--     <span class="right-label">0%</span> -->
+    <!--   </div> -->
+    <!-- </div> -->
+      <div class="vote max">
+        <div class="bar">
+          <div class="left-bar" id="match2team1-bar"></div>
+          <div class="right-bar"></div>
+        </div>
+        <div class="labels">
+          <span class="left-label">0%</span>
+          <span class="right-label">0%</span>
+        </div>
+      </div>
+
+
+  </div>
+
+
+  <script src="script.js"></script>
+    <script>
+    document.getElementById('match2team1-bar').style.width = '120%';
+    </script>
+</body>
+
+</html>

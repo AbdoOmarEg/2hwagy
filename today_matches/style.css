@@ -1,0 +1,134 @@
+/* Set some basic styles for the container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+/* Style the title of the voting system */
+h1 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+/* Style the match section */
+.match {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+/* Style the match titles */
+.match h2 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+/* Style the match times/dates */
+.match p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.match .team img{
+    width: 500px;
+    height: auto;
+  max-height: 280px;
+  max-width: 500px;
+  min-height: 280px;
+  min-width: 500px;
+    object-fit: fill;
+    border: solid;
+}
+
+.match .team{
+    /* width: 45%; */
+  margin-right: 50%;
+  margin-left: -25%;
+  text-align: center;
+}
+
+/* Style the team images */
+.match img {
+  width: 350px;
+  height: 350px;
+  object-fit: contain;
+  border: solid;
+}
+
+/* Style the vote section */
+.votez {
+  /* display: flex; */
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  width: 510px;
+  /* position: relative; */
+}
+
+/* Style the vote buttons */
+.left-btn,
+.right-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.left-btn:hover,
+.right-btn:hover {
+  background-color: #f2f2f2;
+}
+
+/* Style the vote bar */
+.bar {
+  position: relative;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #ddd;
+  overflow: visible; /* Add this line */
+}
+
+.left-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 10px;
+  background-color: #4CAF50;
+  transition: width 0.5s;
+}
+
+.right-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  /* background-color: #FF5722; */
+  transition: width 0.5s;
+}
+
+/* Style the vote percentage labels */
+.labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.left-label,
+.right-label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.container .vote{
+  margin-top: -40px;
+  margin-bottom: 40px;
+}
