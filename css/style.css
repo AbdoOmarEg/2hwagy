@@ -10,6 +10,7 @@
   text-decoration: none !important;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
+  --black: #13131a;
 }
 
 html {
@@ -64,7 +65,7 @@ section {
 
 .link-btn:hover {
   background: crimson;
-  color: #fff;
+  color: #cccccc;
 }
 
 .heading {
@@ -75,11 +76,128 @@ section {
   color: #222;
 }
 
+.header .btn {
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  display: inline-block;
+  border: 0.1rem solid crimson;
+  color: crimson;
+  background: none;
+  cursor: pointer;
+  font-size: 1.7rem;
+  width: 100%;
+}
+
+.btn:hover {
+  background: crimson;
+  color: #cccccc;
+  letter-spacing: .1rem;
+  /* text-align: center; */
+  /* mbt3ml4 7aga ele fo2ya de*/
+}
+
+.header .btn {
+  color: #cccccc;
+  border-color: #cccccc;
+}
+
 .header {
   z-index: 1000;
   padding: 4rem 0;
 }
 
+.header .search-form  {
+  position: absolute;
+  top: 115%;
+  right: 7%;
+  /* background: #222; */
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.header .search-form.active {
+  transform: scaleY(1);
+}
+
+.header .search-form input  {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: crimson;
+  padding: 1rem;
+  text-transform: none;
+}
+
+.header .search-form label{
+  cursor: pointer;
+  font-size: 2.2rem;
+  margin-right: 1.5rem;
+  color: #222;
+}
+
+.header .search-form label:hover{
+  color: crimson;
+}
+
+.header .cart-items-container {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  /*HACK: 3 above make thing right */
+  height: calc(100vh - 9.5rem);
+  width: 35rem;
+  background: #222;
+  padding: 0 1.5rem;
+}
+
+.header .cart-items-container.active{
+  right: 0;
+}
+
+
+.header .cart-items-container .cart-item{
+  position: relative;
+  margin: 2rem 0;
+  display: flex;
+  /* margin-right: -10rem; */
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header .cart-items-container .cart-item .fa-times{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #cccccc;
+  /*make it rotate*/
+}
+
+.header .cart-items-container .cart-item .fa-times:hover{
+  color: crimson;
+}
+
+.header .cart-items-container .cart-item h3{
+  color: #cccccc;
+  font-size: 2rem;
+  padding-bottom: .5rem;
+}
+
+.header .cart-items-container .cart-item .price{
+  color: crimson;
+  font-size: 1.5rem;
+  /* padding-bottom: .5rem; */
+}
+
+
+.header .cart-items-container .cart-item img{
+  height: 7rem;
+}
 .header.active {
   padding: 2rem 0;
   background: crimson;
@@ -87,14 +205,14 @@ section {
 
 .header .logo {
   font-size: 2.5rem;
-  color: #fff;
+  color: #cccccc;
   font-weight: bolder;
 }
 
 .header .nav a {
   font-size: 2rem;
   margin-right: 2rem;
-  color: #fff;
+  color: #cccccc;
 }
 
 .header .nav a:hover {
@@ -104,7 +222,7 @@ section {
 
 .header .icons div {
   font-size: 2.5rem;
-  color: #fff;
+  color: #cccccc;
   margin-left: 2rem;
   cursor: pointer;
 }
@@ -140,7 +258,7 @@ section {
 .login-form form {
   width: 50rem;
   padding: 4rem;
-  background: #fff;
+  background: #cccccc;
   text-align: center;
   position: relative;
   -webkit-animation: fadeIn .2s linear;
@@ -153,7 +271,7 @@ section {
   right: 0;
   font-size: 3rem;
   cursor: pointer;
-  color: #fff;
+  color: #cccccc;
 }
 
 .login-form form #close-login-form:hover {
@@ -244,18 +362,22 @@ section {
 
 .home span {
   font-size: 2.5rem;
-  color: #fff;
+  color: #cccccc;
 }
 
 .home h3 {
   padding: 1rem 0;
   font-size: 6rem;
-  color: #fff;
+  color: #cccccc;
 }
 
 .home .link-btn {
-  color: #fff;
-  border-color: #fff;
+  color: #cccccc;
+  border-color: #cccccc;
+}
+
+.about {
+  background: #222222;
 }
 
 .about span {
@@ -310,7 +432,11 @@ section {
 }
 
 .menu {
-  background: #eee;
+  background: #1D1D1D;
+}
+
+.menu .heading {
+  color: crimson;
 }
 
 .menu .box-container {
@@ -328,7 +454,7 @@ section {
 }
 
 .menu .box-container .box:hover {
-  background: #fff;
+  background: #cccccc;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   -webkit-transform: translateY(-1rem);
@@ -343,7 +469,7 @@ section {
 .menu .box-container .box h3 {
   font-size: 2rem;
   text-transform: capitalize;
-  color: #222;
+  color: crimson;
 }
 
 .menu .box-container .box p {
@@ -360,6 +486,15 @@ section {
 /*   grid-template-rows: repeat(2, auto); */
 /*   gap: 2rem; */
 /* } */
+
+.gallery {
+  background: #222222;
+}
+
+.gallery .heading {
+  color: crimson;
+}
+
 .gallery .box-container {
   display: -ms-grid;
   display: grid;
@@ -376,7 +511,8 @@ section {
   align-items: center;
   overflow: hidden;
   position: relative;
-  height: 25rem;}
+  height: 25rem;
+}
 
 .gallery .box-container .box:hover {
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
@@ -408,7 +544,7 @@ section {
   position: absolute;
   top: 0;
   left: 0;
-  background: #fff;
+  background: #1D1D1D;
   text-align: center;
   padding: 3rem 2rem;
   height: 100%;
@@ -436,19 +572,18 @@ section {
   display: flex;
   margin-top: 30%;
   justify-content: center;
-  gap: 10%;
 }
 
 .gallery .box-container .box .content .teaz img{
-  width: 25%;
- min-width: 100px; /* add this to maintain the image size */
+  width: 100%;
+  min-width: 140px; /* add this to maintain the image size */
 }
 
 .gallery .box-container .box .content .teaz a {
   display: inline-block;
   padding: 10px 20px;
   background-color: #333;
-  color: #fff;
+  color: #cccccc;
   text-decoration: none;
   font-size: 18px;
   border-radius: 5px;
@@ -474,7 +609,7 @@ section {
 }
 
 .reviews .box-container .box:hover {
-  background: #fff;
+  background: #cccccc;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   -webkit-transform: translateY(-1rem);
@@ -529,7 +664,7 @@ section {
 
 .contact .contact-info-container .box:hover i {
   background: crimson;
-  color: #fff;
+  color: #cccccc;
 }
 
 .contact .contact-info-container .box i {
@@ -573,7 +708,7 @@ section {
 
 .contact form .box:focus {
   background: crimson;
-  color: #fff;
+  color: #cccccc;
 }
 
 .contact form .box:focus::-webkit-input-placeholder {
@@ -612,7 +747,7 @@ section {
 .blogs .box-container .box:hover {
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  background: #fff;
+  background: #cccccc;
 }
 
 .blogs .box-container .box:hover .image {
@@ -656,7 +791,7 @@ section {
 
 .blogs .box-container .box .icons {
   padding: 1.7rem;
-  background: #fff;
+  background: #cccccc;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -690,7 +825,7 @@ section {
 
 .newsletter h3 {
   font-size: 4rem;
-  color: #fff;
+  color: #cccccc;
   text-transform: uppercase;
   margin-bottom: 0;
 }
@@ -698,13 +833,13 @@ section {
 .newsletter p {
   padding: 1rem 0;
   font-size: 2rem;
-  color: #fff;
+  color: #cccccc;
 }
 
 .newsletter form {
   margin: 1rem auto;
   max-width: 60rem;
-  background: #fff;
+  background: #cccccc;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -758,12 +893,18 @@ section {
 
 .footer .share a:hover {
   background: crimson;
-  color: #fff;
+  color: #cccccc;
 }
+
+
+
+
+
+
 
 @media (max-width: 991px) {
   html {
-    font-size: 55%;
+    font-size: 45%;
     scroll-padding-top: 8rem;
   }
   .home h3 {
@@ -772,6 +913,7 @@ section {
   section {
     padding: 3rem 0;
   }
+
 }
 
 @media (max-width: 768px) {
@@ -793,13 +935,15 @@ section {
   .header #menu-btn.fa-times {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
+    /*TODO: 5ly button el x fe elcart shop y3mel kda brdo*/
+    /*l2et en el x bta3t el login feha animation an2lha mnha*/
   }
   .header .nav {
     position: absolute;
     top: 99%;
     left: 0;
     right: 0;
-    background: #fff;
+    background: #cccccc;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
@@ -818,6 +962,11 @@ section {
   }
   .contact .map {
     height: 25rem;
+  }
+
+  .header .search-form{
+    width: 90%;
+    right: 2rem;
   }
 }
 
